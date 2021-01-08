@@ -3,6 +3,11 @@ const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
   cdkVersion: '1.73.0',
   name: 'aws-cdk-fargate-learning',
+  cdkDependencies: [
+    '@aws-cdk/aws-ecs',
+    '@aws-cdk/aws-ecs-patterns',
+    '@aws-cdk/aws-ec2'
+  ]
 
   /* AwsCdkTypeScriptAppOptions */
   // appEntrypoint: 'main.ts',                                                 /* The CDK app's entrypoint (relative to the source directory, which is "src" by default). */
