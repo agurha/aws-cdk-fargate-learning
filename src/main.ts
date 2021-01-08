@@ -24,7 +24,7 @@ export class FargateService extends Construct {
     });
 
     const sampleserver = taskDefinition.addContainer('sample', {
-      image : ecs.ContainerImage.fromRegistry('image:latest'),
+      image : ecs.ContainerImage.fromRegistry('sample-app:latest'),
       
     });
 
